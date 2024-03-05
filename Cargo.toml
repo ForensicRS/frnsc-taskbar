@@ -1,0 +1,18 @@
+[package]
+name = "frnsc-taskbar"
+version = "0.9.0"
+authors = ["Samuel Garcés Marín <samuel.garces@protonmail.com>"]
+keywords = ["forensic", "windows", "taskbar", "registry", "cybersecurity"]
+categories = ["parsing"]
+description = "Pure rust Windows TaskBar forensic parser"
+license = "MIT"
+edition = "2021"
+repository = "https://github.com/ForensicRS/frnsc-amcache"
+exclude = ["/artifacts"]
+
+[dependencies]
+#forensic-rs = "0.12.0"
+forensic-rs = { path = "../forensic-rs" }
+
+[target.'cfg(windows)'.dev-dependencies]
+frnsc-liveregistry-rs = { path = "../frnsc-liveregistry-rs" }
